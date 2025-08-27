@@ -36,6 +36,7 @@ int main() {
             buffer[bytes] = '\0';
             cout << "Received: " << buffer << endl;
 
+            // Echo message back to client
             sendto(sock, buffer, bytes, 0,
                    (sockaddr*)&clientAddr, clientLen);
         }
